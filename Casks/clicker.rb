@@ -1,6 +1,6 @@
 cask "clicker" do
-  version "1.0"
-  sha256 "3619a322625e85fd110bf5f0236bd25d91616650510646ad698d58bd215a83fd"
+  version "1.1"
+  sha256 "0bb3703fcf0afd3a759637fa7832827092e48bccbfeeda32598f5cc8927c6204"
 
   url "https://github.com/ribren/clicker/releases/download/v#{version}/Clicker-macOS.zip"
   name "Clicker"
@@ -15,11 +15,6 @@ cask "clicker" do
   depends_on macos: ">= :sonoma"
 
   app "Clicker.app"
-
-  caveats <<~EOS
-    Clicker uses pyatv to talk to Apple TVs. Install it with:
-      brew install pipx && pipx install pyatv
-  EOS
 
   zap trash: [
     "~/Library/Application Support/Clicker",
